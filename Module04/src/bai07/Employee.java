@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Objects;
 
 public abstract class Employee {
-	protected final int thePayrollNumber;
+	protected int thePayrollNumber;
 	protected String theName;
 	protected double theBasicMonthlySalary;
 
