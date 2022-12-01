@@ -1,0 +1,33 @@
+ĐỀ BÀI:
+Phần mềm quản lý nhân viên của công ty Z có mô tả như sau:
+Mỗi nhân viên (Employee) thuộc một trong ba loại: nhân viên có kinh nghiệm lâu năm 
+(Experience), nhân viên mới ra trường (Fresher), nhân viên thực tập (Intern).
+Tất cả các nhân viên đều có các thuộc tính là: mã (ID), họ tên (fullname), ngày sinh (birthday), số điện thoại (phone). Ngoài ra:
+Đối với nhân viên Experience có thêm thuộc tính: số năm kinh nghiệm (expInYear).
+Đối với nhân viên Fresher có thêm thuộc tính: năm tốt nghiệp (gradYear), xếp loại tốt nghiệp (gradRank).
+Đối với nhân viên Intern có thêm thuộc tính: chuyên ngành đang học (major), học kì đang học (semester).
+Yêu cầu:
+Câu 1. [5.0 điểm]
+Cài đặt các lớp: FullName, Employee, Experience, Fresher, Intern và tạo các mối quan hệ giữa các lớp cho hợp lý. Lớp FullName có 2 thuộc tính là lastName và firstName để tách riêng họ, tên. 
+Lớp nào có thể là lớp trừu tượng? Hãy cài đặt tính trừu tượng cho lớp đó.
+Ở mỗi lớp, phải có các getter/setter; constructor đủ tham số, trong đó có kiểm tra ràng buộc dữ liệu theo mô tả sau (nếu vi phạm ràng buộc thì gán giá trị mặc định hợp lý hoặc ném lỗi):
+- Các nhân viên đều phải >=20 tuổi;
+- Số điện thoại là chuỗi có 10 ký số và bắt đầu bằng số 0;
+- Năm tốt nghiệp phải từ năm hiện tại trở về trước;
+- Xếp loại tốt nghiệp gồm: A, B hoặc C;
+- Học kì đang học phải >=6 và <=10.
+- Các thuộc tính còn lại không được rỗng (nếu là kiểu chuỗi); số phải > 0 (nếu là kiểu số).
+Ngoài ra, ở mỗi lớp có hàm toString() trả về thông tin tương ứng của đối tượng đó.
+Câu 2. [2.5 điểm]
+Cài đặt thêm một lớp khác để quản lý danh sách các nhân viên, sử dụng List hoặc Set để chứa 
+danh sách nhân viên. Trong lớp này, viết các phương thức sau sao cho hợp lý:
++ Thêm một nhân viên vào danh sách, không được thêm trùng mã.
++ Đếm số lượng nhân viên tốt nghiệp trong năm nay.
++ Sửa ngày sinh của nhân viên bất kỳ.
++ Lấy danh sách các nhân viên có kinh nghiệm hơn 5 năm.
++ Sắp xếp tên nhân viên tăng dần.
+Câu 3. [2.0 điểm]
+Cài đặt lớp Testing chứa hàm main, trong đó:
++ Thêm sẵn vào danh sách 07 đối tượng nhân viên đủ loại, trong đó có 02 nhân viên tốt nghiệp trong năm nay và 02 nhân viên có hơn 5 năm kinh nghiệm.
++ Xuất ra toàn bộ danh sách đã thêm, hiển thị dạng bảng, có tiêu đề hợp lý và đầy đủ thông tin.
++ Thực hiện gọi các phương thức còn lại trong câu 2 và xuất kết quả ra màn hình, yêu cầu người dùng nhập thông tin khi thực hiện tính năng tương ứng.
